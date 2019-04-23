@@ -1,4 +1,4 @@
-package com.datastructures.stack;
+package com.datastructures.stack.usingarray;
 
 public class Stack {
 
