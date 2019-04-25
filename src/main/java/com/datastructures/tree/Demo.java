@@ -4,7 +4,7 @@ public class Demo {
 
 	public static void main(String[] args) {
 
-		BST bst = new BST();
+		BinarySearchTree bst = new BinarySearchTree();
 		BstNode node = new BstNode(15);
 		bst.root = node;
 

@@ -1,6 +1,6 @@
 package com.datastructures.tree;
 
-public class BST {
+public class BinarySearchTree {
 
 	BstNode root;
 
