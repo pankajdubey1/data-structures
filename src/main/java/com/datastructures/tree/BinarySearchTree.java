@@ -2,7 +2,7 @@ package com.datastructures.tree;
 
 public class BinarySearchTree {
 
-	BstNode root;
+	public BstNode root;
 
 	public BstNode insert(BstNode root, int data) {
 		if (root == null)
