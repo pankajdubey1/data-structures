@@ -72,4 +72,41 @@ public class BinarySearchTree {
                 return false;
         }
     }
+
+    public BstNode delete(BstNode root, int data) {
+        if (root == null) {
+            return null;
+        } else if (data < root.getData()) {
+            root.setLeft(delete(root.getLeft(), data));
+        } else if (data > root.getData()) {
+            root.setRight(delete(root.getRight(), data));
+        } else {
+            // case 1
+            if (root.getLeft() == null && root.getRight() == null) {
+                root = null;
+            }
+            // case 2: one child
+            else if (root.getLeft() == null) {
+                root = root.getRight();
+            } else if (root.getLeft() != null) {
+                root = root.getLeft();
+            }
+            // case 3: two child
+            else {
+                BstNode temp = findMinNode(root.getRight());
+                root.setData(temp.getData());
+                root.setRight(delete(root.getRight(), temp.getData()));
+            }
+        }
+        return root;
+    }
+
+    private BstNode findMinNode(BstNode root) {
+        if (root == null)
+            return null;
+        else if (root.getLeft() == null)
+            return root;
+        else
+            return findMinNode(root.getLeft());
+    }
 }
