@@ -14,6 +14,8 @@ public class Demo {
 		System.out.println(bst.findMax(bst.root));
 
 		System.out.println(bst.findHeight(bst.root));
+
+		System.out.println(bst.isBinarySearchTree(bst.root));
 	}
 
 }
